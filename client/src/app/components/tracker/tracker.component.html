@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row text-center">
+    <h1>{{title}}</h1>
+  </div>
+  <app-status></app-status>
+  <br>
+
+  <div class="row">
+    <div class="col-md-12 float-right">
+      <button class="btn btn-outline-success btn-lg" (click)="onNewTaskClick()">{{btnNewTaskText}}</button>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="showNewTask">
+    <app-new-task (submitted)="onNewTaskSubmittedEvent($event)" (taskCreated)="onNewTaskCreatedEvent($event)"
+      (canceled)="onCancelNewTaskEvent($event)"></app-new-task>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="card" *ngFor="let task of tasks; let i=index">
+        <div>
+          <h3 class="alignleft text-white">{{task.name}}</h3>
+          <p class="alignright text-white">Estimated time: {{task.estimate}} hs</p>
+        </div>
+        <div class="content text-white">
+          {{task.description}}
+        </div>
+        <select (change)="onSelectNewState(task.id, $event.target.value)" [(ngModel)]="task.state">
+          <option *ngFor="let state of states" [value]="state.id">{{state.name | uppercase}}</option>
+        </select>
+        <div class="footer">
+          <fa-icon class="icon" (click)="onDeleteClick(task)" [icon]="iconTrash"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

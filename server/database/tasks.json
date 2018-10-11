@@ -1,0 +1,40 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "name": "Learn Angular 6",
+            "description": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop. ",
+            "estimate": 3,
+            "state": 1
+        },
+        {
+            "id": 2,
+            "name": "Learn React",
+            "description": "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.",
+            "estimate": 5,
+            "state": 2
+        },
+        {
+            "id": 3,
+            "name": "Learn Vue.js",
+            "description": "JVue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable.",
+            "estimate": 5,
+            "state": 3
+        }
+    ],
+    "taskStates": [
+        {
+            "id": 1,
+            "name": "completed"
+        },
+        {
+            "id": 2,
+            "name": "in progress"
+        },
+        {
+            "id": 3,
+            "name": "planned"
+        }
+    ]
+}
+

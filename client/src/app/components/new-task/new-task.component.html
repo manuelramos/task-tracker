@@ -1,0 +1,39 @@
+<div class="nc-container">
+
+  <form [formGroup]="newTaskForm" (ngSubmit)="createTask(newTaskForm.value)">
+    <div class="form-group row">
+      <label for="taskName" class="col-sm-3 col-form-label">Name</label>
+      <div class="col-sm-9">
+        <input type="text" formControlName="name">
+        <em *ngIf="newTaskForm.controls.name?.invalid && newTaskForm.controls.name?.touched"> Required field</em>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="description" class="col-sm-3 col-form-label">Description</label>
+      <div class="col-sm-9">
+        <textarea rows="4" cols="50" formControlName="description"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="description" class="col-sm-3 col-form-label">Estimated time:</label>
+      <div class="col-sm-9">
+        <input type="number" min="1" formControlName="estimatedTime"> hs
+        <em *ngIf="newTaskForm.controls.estimatedTime?.invalid && newTaskForm.controls.estimatedTime?.touched">
+          Required field</em>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="state" class="col-sm-3 col-form-label">State</label>
+      <div class="col-sm-9">
+        <select formControlName="state">
+          <option *ngFor="let state of states" [value]="state.id">{{state.name}}</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Create</button> <!-- [disabled]="newTaskForm.invalid" -->
+    <button class="btn btn-danger" (click)="onCancelNewTaskClick()">Cancel</button>
+  </form>
+</div>

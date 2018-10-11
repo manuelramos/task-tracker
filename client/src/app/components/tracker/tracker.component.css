@@ -1,0 +1,44 @@
+.card {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #3D9970 ;
+    background-color: #3D9970  ;
+}
+
+.content {
+    text-align: justify;
+    font-size: 15px;
+    color: black;
+    ;
+}
+
+.icon {
+    font-size: 25px;
+    float: right;
+    cursor: pointer;
+}
+
+h1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.alignleft {
+    float: left;
+    color:  black;
+}
+.alignright {
+    float: right;
+    color:  black;
+}
+
+.btn-outline-success {
+    float: right;
+    margin-right: 10px;
+}
+
+select {
+    width: 300px;
+}
