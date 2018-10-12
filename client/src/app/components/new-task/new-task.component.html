@@ -29,11 +29,11 @@
       <label for="state" class="col-sm-3 col-form-label">State</label>
       <div class="col-sm-9">
         <select formControlName="state">
-          <option *ngFor="let state of states" [value]="state.id">{{state.name}}</option>
+          <option *ngFor="let state of states" [value]="state.id">{{state.name | uppercase}}</option>
         </select>
       </div>
     </div>
-    <button class="btn btn-outline-primary" type="submit">Create</button> <!-- [disabled]="newTaskForm.invalid" -->
-    <button class="btn btn-outline-danger" (click)="onCancelNewTaskClick()">Cancel</button>
+    <button class="btn btn-outline-primary float-right" type="submit">Create</button> <!-- [disabled]="newTaskForm.invalid" -->
+    <button class="btn btn-outline-danger float-right" (click)="onCancelNewTaskClick()">Cancel</button>
   </form>
 </div>
