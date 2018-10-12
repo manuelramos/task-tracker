@@ -20,3 +20,16 @@ Small SPA with this simple requirements:
 * The user needs to be able to add/remove and change the state of the tasks.
 * Somewhere in the SPA you need to present an up to date status, adding up all hours for each state.
 
+## Instructions to run the app
+
+1. Install the dependencies
+```
+npm install
+```
+
+2. Run the app
+```
+npm start
+```
+> It will run with a proxy file which point to the server side.
+
