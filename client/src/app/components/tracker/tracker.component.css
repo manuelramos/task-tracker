@@ -17,6 +17,8 @@
     font-size: 25px;
     float: right;
     cursor: pointer;
+    color: white;
+    margin-top: 20px;
 }
 
 h1 {
@@ -41,4 +43,5 @@ h1 {
 
 select {
     width: 300px;
+    margin-top: 20px;
 }
